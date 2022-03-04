@@ -1,18 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './Login'
+import Home from "./Home";
+import Nav from "./Nav";
+import AccountDetails from "./AccountDetails";
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 	return (
 		<Router>
 			<Routes>
-				{/* <Route
+				<Route
 					exact
 					path="/home"
 					element={
-							<Home />
+						<>
+						<Nav/>
+						<Home />
+						</>
+							
 					}
-				/> */}
+				/>
 				<Route
 					exact
 					path="/"
@@ -20,41 +27,17 @@ function App() {
 							<Login />
 					}
 				/>
-				{/* <Route
+				<Route
 					exact
 					path="/account"
 					element={
+						<>
+						    <Nav/>
 							<AccountDetails />
+						</>
 					}
 				/>
-				<Route
-					exact
-					path="/cart"
-					element={
-							<Cart />
-					}
-				/>
-				<Route
-					exact
-					path="/checkout"
-					element={
-							<Checkout />
-					}
-				/>
-				<Route
-					exact
-					path="/products"
-					element={
-							<ProductList />
-					}
-				/>
-				<Route
-					exact
-					path="/product/:productid/details"
-					element={
-							<ProductDetails />
-					}
-				/> */}
+				
 			</Routes>
 		</Router>
 	);
